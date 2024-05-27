@@ -1,0 +1,99 @@
+header {
+ display: block; /* Для старых браузеров */
+ height: 40px; /* Высота шапки */
+ background: #00000 center bottom;
+}
+
+.container {
+	width: 100%;
+	margin: 0 auto;
+
+}
+
+/* Значення для лого та навігації */
+.header_inner {
+
+	max-width: 1440px;
+	display: flex;
+	justify-content: space-between; 
+	/* Розділення на дві частини контейнера */
+}
+
+/* Стилі посилань */
+.header_logo {
+	color: white;
+	font-family: 'Jaldi';
+	font-weight: bold;
+	text-transform: uppercase;
+	margin: 0 30;	
+} 
+
+/* Налаштування навігації посилань шапки  */
+.nav {
+		font-family: 'Inter';
+        text-transform: uppercase;
+	    padding: 0 0 40;
+}
+
+.nav_link {
+	font-family: 'Jaldi';
+	font-weight: normal;
+	text-transform: uppercase;
+	margin: 0 0 0 30;
+	text-decoration: none;
+ transition: color 0.4s linear; /* плавна зміна кольору посилань при наведені курсора*/
+
+}
+
+
+a:link {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: none;
+}	
+.title {               /* параметри тексту заголовків (колір, вирівнювання, шрифт, відступ знизу, лінія знизу) */
+	 color: white;
+	 text-align: center;
+	 font-family: Arial, Helvetica, sans-serif;
+     padding: 0px 0px 1px 0px;
+     border-bottom: 3px dotted yellow;
+}
+
+ 
+}
+table,td {           /* параметри таблиці та стовців (розмір ліній, прибирання подвійного обведення) */
+  border: none;
+  border-collapse: collapse;
+}
+table {              /* параметри таблиці (ширина, відступ від лівого краю) */
+	 margin-top: 50;
+	 width: 70%;
+	 margin-right: 15%;
+}
+td {                 /* параметри стовбців ( вирівнювання за лівим краєм) */
+  text-align: center;
+}
+
+img {                 /* відцентровування зображень */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

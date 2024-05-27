@@ -1,0 +1,1091 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Jaldi;
+}
+
+body {
+    color: aliceblue;
+    background: url("..static/images_main/background.png") no-repeat;
+    background-size: 100%;
+    background-position: center;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    position: relative;
+    font-size: 25px;
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.logo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    animation: showRight 1s ease forwards;
+    animation-delay: .4s;
+ }
+
+.navbar a {
+    font-size: 18px;
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}
+
+.navbar a:hover, 
+.navbar a.active {
+    color: #ffff00;
+}
+
+.home {
+ 
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.home-content {
+    background: transparent;
+    max-width: 600px;
+   }
+
+.my_photo {
+    position: relative;
+    max-width:600px;
+    max-height: 400px;
+    width: 550px;
+    height: 400px;
+    margin-top: 65px;
+    background: transparent;
+}
+
+.home-content h1 {
+    position: relative;
+    font-size: 44px;
+    font-family: Jaldi;
+    font-style: normal;
+    margin-top: 25px;
+    font-weight: 550;
+    line-height: 1.2;
+}
+
+.home-content h1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    animation: showRight 1s ease forwards;
+    animation-delay: .2s;
+ }
+
+.home-content h2 {
+    position: relative;
+    background: transparent;
+    font-size: 44px;
+    font-family: Jaldi;
+    font-style: normal;
+    font-weight: 550;
+}
+
+.home-content h2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    animation: showRight 1s ease forwards;
+    animation-delay: .6s;
+ }
+
+.home-content p {
+    font-size: 32px;
+    font-family: Jaldi;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.home-content .btn-box {
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+}
+
+.btn-box a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center; /* Вирівнювання по горизонталі */
+    align-items: center; /* Вирівнювання по вертикалі, центрування */
+    margin-top: 90px ;
+    margin-bottom: 10%;
+    width: 150px;
+    height: 100%;
+    background: yellow;
+    border: 2px solid yellow;
+    border-radius: 8px;
+    font-size: 19px;
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.btn-box a:hover {
+    color: yellow;
+}
+
+.btn-box a:nth-child(2) {
+    background: transparent;
+    color: yellow;
+}
+
+.btn-box a:nth-child(2):hover {
+    color: black;
+}
+
+.btn-box a:nth-child(2)::before {
+    background: yellow;
+}
+
+.btn-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: black;
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-box a:hover::before {
+    width: 100%;
+}
+
+.home-sci {
+    position: absolute;
+    background: transparent;
+    margin-left: 80px;
+    margin-top: 505px;
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-sci a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center; /* Вирівнювання по горизонталі */
+    align-items: center; /* Вирівнювання по вертикалі, центрування */
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid yellow;
+    border-radius: 50%;
+    font-size: 20px;
+    color: yellow;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden; /*  краї за межами основного скриті */
+    transition: .5s;
+}
+
+.home-sci a:hover {
+    color: black;
+}
+
+.home-sci a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: yellow;
+    z-index: -1;
+    transition: .5s;
+}
+
+.home-sci a:hover::before {
+    width: 100%;
+}
+
+/* KEYFRAMES ANIMATION */
+@keyframes showRight {
+    100%{
+        width: 0;
+    }
+}
+
+
+
+.about_me h1 {
+    position: relative;
+    font-size: 44px;
+    font-family: Jaldi;
+    font-style: normal;
+    margin-top: 100px;
+    margin-left: 210px;
+    font-weight: 550;
+    line-height: 1.2;
+}
+
+.about_me p {
+    position: relataive;
+    background: transparent;
+    width: 800px;
+    font-size: 32px;
+    font-family: Jaldi;
+    font-style: normal;
+    margin-top: 25px;
+    margin-left: 210px;
+    margin-bottom: 100px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+/* MY WORKS */
+.my-works {
+    position: center;
+    background: transparent;
+    width: 285px;
+    height: 109px;
+    margin-left: 600px;
+    margin-bottom: 100px;
+}
+
+.my-works svg {
+    position: absolute;
+    
+}
+
+.my-works h2 {
+    position: relative;
+    font-size: 48px;
+    color: black;
+    font-family: Jaldi;
+    font-weight: 550;
+    margin-left: 35px;
+    padding-top: 10px;
+}
+
+.my-works span {
+    position: relative;
+    font-size: 48px;
+    color: aliceblue;
+    font-family: Jaldi;
+    font-style: normal;
+    font-weight: 550;
+    margin-top: 30px;
+}
+
+.images {
+    position: relative;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    width: 1100px;
+    height: 450px;
+    margin-left: 200px;
+}
+
+/* Рядок з написами до зображень портфоліо */
+.container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+    margin-left: 250px;
+    margin-top: -20px;
+    margin-bottom: 180px;
+}
+
+/* CITY IDENTITY */
+.city-id{
+    position: absolute;
+    background: transparent;
+    width: 225px;
+    height: 61px;
+}
+
+.city-id svg {
+    position: absolute;
+    
+}
+
+.city-id h1 {
+    position: relative;
+    font-size: 20px;
+    color: black;
+    font-family: Jaldi;
+    font-weight: 400;
+    margin-left: 22px;
+    margin-top: 12px;
+}
+
+span {
+    position: relative;
+    font-size: 20px;
+    color: aliceblue;
+    font-family: Jaldi;
+    font-style: normal;
+    font-weight: 400;
+}
+
+/* EXHIBITION CATALOGUE */
+.exh-cat{
+    position: absolute;
+    background: transparent;
+    width: 225px;
+    height: 61px;
+    margin-left: 385px;
+}
+
+.exh-cat svg {
+    position: absolute;
+    
+}
+
+.exh-cat h1 {
+    position: relative;
+    font-size: 20px;
+    color: black;
+    font-family: Jaldi;
+    font-weight: 400;
+    margin-left: 22px;
+    margin-top: 12px;
+}
+
+/* WINE PACKAGING DESIGN */
+.wine-pack{
+    position: absolute;
+    background: transparent;
+    width: 230px;
+    height: 61px;
+    margin-left: 770px;
+}
+
+.wine-pack svg {
+    position: absolute;
+    
+}
+
+.wine-pack h1 {
+    position: relative;
+    font-size: 20px;
+    color: black;
+    font-family: Jaldi;
+    font-weight: 400;
+    margin-left: 18px;
+    margin-top: 12px;
+}
+
+.images-1 {
+    position: relative;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    width: 1100px;
+    height: 450px;
+    margin-left: 200px;
+}
+
+/* Рядок з написами до зображень портфоліо 2 */
+.container1 {
+    position: relative;
+    background: blue;
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+    margin-left: 250px;
+    margin-top: -20px;
+    margin-bottom: 180px;
+}
+
+/* PACKAGING REDESIGN */
+.pack-re{
+    position: absolute;
+    background: transparent;
+    width: 225px;
+    height: 61px;
+}
+
+.pack-re svg {
+    position: absolute;
+    
+}
+
+.pack-re h1 {
+    position: relative;
+    font-size: 20px;
+    color: black;
+    font-family: Jaldi;
+    font-weight: 400;
+    margin-left: 18px;
+    margin-top: 12px;
+}
+
+span {
+    position: relative;
+    font-size: 20px;
+    color: aliceblue;
+    font-family: Jaldi;
+    font-style: normal;
+    font-weight: 400;
+}
+
+/* BOOK PRINTING */
+.bk-prnt{
+    position: absolute;
+    background: transparent;
+    width: 225px;
+    height: 61px;
+    margin-left: 385px;
+}
+
+.bk-prnt svg {
+    position: absolute;
+    
+}
+
+.bk-prnt h1 {
+    position: relative;
+    font-size: 20px;
+    color: black;
+    font-family: Jaldi;
+    font-weight: 400;
+    margin-left: 13px;
+    margin-top: 12px;
+}
+
+/* DVD BOX */
+.dvd-box{
+    position: absolute;
+    background: transparent;
+    width: 230px;
+    height: 61px;
+    margin-left: 770px;
+}
+
+.dvd-box svg {
+    position: absolute;
+    
+}
+
+.dvd-box h1 {
+    position: relative;
+    font-size: 20px;
+    color: black;
+    font-family: Jaldi;
+    font-weight: 400;
+    margin-left: 23px;
+    margin-top: 12px;
+}
+
+
+/* PORTFOLIO ARROW */
+.portfolio-arrow {
+    position: relative;
+    background: transparent;
+    width: 290px;
+    height: 97px;
+    margin-left: 600px;
+  }
+
+.portfolio-arrow svg {
+    position: relative;
+    margin-bottom: -90px;
+    
+}
+
+.portfolio-arrow h1 {
+    position: relative;
+    background: transparent;
+    font-size: 32px;
+    color: yellow;
+    font-family: Jaldi;
+    font-weight: 400;
+    margin-left: 28px;
+    padding-bottom: 10px;
+}
+
+.arrow svg {
+    position: absolute;    
+    background: transparent;
+    width: 100px;
+    height: 25px;
+    fill: none; 
+    margin-top:-50px;
+    margin-left: 200px;
+}
+
+/* MY SERVICES  */
+.my-services {
+    position: relative;
+    background: transparent;
+    width: 285px;
+    height: 109px;
+    margin-top: 180px;
+    margin-left: 240px;
+}
+
+.my-services svg {
+    position: absolute;
+    
+}
+
+.my-services h2 {
+    position: relative;
+    font-size: 48px;
+    color: black;
+    font-family: Jaldi;
+    font-weight: 550;
+    margin-left: 35px;
+    padding-top: 10px;
+}
+
+.services {
+    position: relative;
+    font-size: 48px;
+    color: aliceblue;
+    font-family: Jaldi;
+    font-style: normal;
+    font-weight: 550;
+    margin-top: 30px;
+}
+
+
+
+
+
+table {
+    position: relative;
+    border-collapse: collapse;
+    background: transparent;
+    width: 971px;
+    margin-top: 40px;
+    margin-left: 250px;
+    margin-bottom: 180px;
+  }
+  
+   td {
+    padding: 30px 0px 30px;
+    text-align: left;
+    border-bottom: 3px solid yellow;
+  }
+
+  tr td h1 {
+    background: transparent;
+    width: 150px;
+  }
+
+  td svg {
+    margin-left: 650px; 
+    width: 89;
+    height: 24; 
+    fill: none;
+    background: transparent;
+  }
+ 
+ .logotype {
+    margin-left: 50px;
+} 
+
+.title {
+    width: 100%;
+    margin-left: 20px;
+}
+
+.logo-text {
+    column-count: 2;
+}
+
+.hide {
+    display: none;
+}
+.show {
+    display: block;
+}
+
+  /*.logo-text p {
+    position: relative;
+    display: none;
+    width: 400px;
+    background-color: rgb(255, 0, 0);
+    padding: 20px;
+  }
+  
+  .logo-text:hover p {
+    display: block;
+  }*/
+  
+/* CONTACT ME */
+.contact-me {
+    position: center;
+    background: transparent;
+    width: 300px;
+    height: 109px;
+    margin-left: 560px;
+    margin-bottom: 100px;
+}
+
+.contact-me svg {
+    position: absolute;
+    
+}
+
+.contact-me h2 {
+    position: relative;
+    font-size: 48px;
+    color: black;
+    font-family: Jaldi;
+    font-weight: 550;
+    margin-left: 40px;
+    padding-top: 10px;
+}
+
+.contact-me span {
+    position: relative;
+    font-size: 48px;
+    color: aliceblue;
+    font-family: Jaldi;
+    font-style: normal;
+    font-weight: 550;
+    margin-top: 30px;
+}
+
+/* CONTACT ME FORM */
+
+/*.contact-form {
+    position: relative;
+    background: transparent;
+    width: 730px;
+    height: 563px;
+    border-radius: 50px;
+  
+    margin-left: 350px;
+    margin-bottom: 200px;
+
+}
+
+.input-container {
+    position: relative;
+    margin: 1rem 0;
+}
+
+.input-name {
+    color: #FF0;
+    width: 595px;
+    height: 60px;
+    margin-left: 60px;
+    margin-top: 20px;
+    border-radius: 20px;
+    color: #FF0;
+    font-size: 20px;
+    padding-left: 20px;
+    background: transparent;
+    border: 2px solid yellow;
+    
+}
+
+.input-phone {
+      width: 595px;
+    height: 60px;
+    margin-left: 60px;
+    margin-top: 20px;
+    border-radius: 20px;
+    color: #FF0;
+    font-size: 20px;
+    padding-left: 20px;
+    background: transparent;
+    border: 2px solid yellow;
+}
+
+.input-email {
+    width: 595px;
+    height: 60px;
+    margin-left: 60px;
+    margin-top: 20px;
+    border-radius: 20px;
+    color: #FF0;
+    font-size: 20px;
+    padding-left: 20px;
+    background: transparent;
+    border: 2px solid yellow;
+}
+
+.input-textarea {
+    margin-left: 60px;
+    margin-top: 20px;
+    width: 595px;
+    height: 200px;
+    border-radius: 20px;
+    color: #FF0;
+    font-size: 20px;
+    padding-left: 20px;
+    padding-top: 15px;
+    background: transparent;
+    border: 2px solid yellow;
+    resize: none;
+    overflow-y: auto;
+
+}
+
+.input-container label {
+    position: absolute;
+    background-color: transparent;
+    top: 60%;
+    left: 80px;
+    transform: translateY(-50%);
+    padding: 0 0.4rem;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 400;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+.input-container.textarea label {
+    top: 2.5rem;
+    transform: translateY(0);
+}
+
+.btn {
+    position: relative;
+    margin-left: 320px;
+    height: 45px;
+    width: 100px;
+    padding: 0.6rem 1.3rem;
+    background-color: #FF0;
+    border: 2px solid yellow;
+    font-family: Jaldi;
+    font-size: 20px;
+    color: black;
+    line-height: 1;
+    border-radius: 25px;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: transparent;
+    color: #FF0;
+    transition: 0.3s;
+
+}
+
+.input-container span {
+    position: absolute;
+    top: 20px;
+    left: 90px;
+    transform: translateY(-50%);
+    background-color: none;
+    font-size: 0.9rem;
+    font-weight: 400;
+    text-align: center;
+    width: 70px;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+.input-container span:before,
+.input-container span:after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 12px;
+    opacity: 0;
+    background-color: black;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.3s;
+    z-index: -1;
+
+}
+
+.input-container span:before {
+    left: 50%;
+}
+
+.input-container span:after {
+    right: 50%;
+}
+
+.input-container.focus label {
+    top: 1.2rem;
+    transform: translateY(-50%);
+    left: 100px;
+    font-size: 0.8rem;
+}
+
+.input-container.focus span:before,
+.input-container.focus span:after {
+    width: 50%;
+    opacity: 1;
+}*/
+
+
+  
+/* ANOTHER FORM*/
+
+  
+  form {
+    margin-left: 390px;
+    margin-top: -80px;
+    padding: 2.3rem 2.2rem;
+    z-index: 10;
+    overflow: hidden;
+    position: relative;
+  }
+  
+ 
+  .input-container {
+    position: relative;
+    margin: 1rem 0;
+    width: 600px;
+
+  }
+  
+  .input {
+    width: 100%;
+    outline: none;
+    border: 2px solid yellow;
+    background: none;
+    padding: 0.6rem 1.2rem;
+    color: yellow;
+    font-weight: 500;
+    font-size: 24px;
+    letter-spacing: 0.5px;
+    border-radius: 25px;
+    transition: 0.3s;
+  }
+  
+  textarea.input {
+    padding: 0.8rem 1.2rem;
+    min-height: 150px;
+    border-radius: 22px;
+    resize: none;
+    overflow-y: auto;
+  }
+  
+  .input-container label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    padding: 0 0.4rem;
+    color: #fafafa;
+    font-size: 0.9rem;
+    font-weight: 400;
+    pointer-events: none;
+    z-index: 1000;
+    transition: 0.5s;
+  }
+  
+  .input-container.textarea label {
+    top: 1rem;
+    transform: translateY(0);
+  }
+  
+  .btn {
+    padding: 0.6rem 1.3rem;
+     color: black;
+    background-color: #FF0;
+    border: 2px solid yellow;
+    font-family: Jaldi;
+    font-size: 20px;
+    line-height: 1;
+    border-radius: 25px;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-left: 250px;
+  }
+  
+  .btn:hover {
+    background-color: transparent;
+    color: #fff;
+  }
+  
+  .input-container span {
+    position: absolute;
+    top: 0;
+    left: 25px;
+    transform: translateY(-50%);
+    font-size: 0.8rem;
+    padding: 0 0.4rem;
+    color: transparent;
+    pointer-events: none;
+    z-index: 500;
+  }
+  
+  .input-container span:before,
+  .input-container span:after {
+    content: "";
+    position: absolute;
+    width: 10%;
+    opacity: 0;
+    transition: 0.3s;
+    height: 5px;
+    background-color: black;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .input-container span:before {
+    left: 50%;
+  }
+  
+  .input-container span:after {
+    right: 50%;
+  }
+  
+  .input-container.focus label {
+    top: 0;
+    transform: translateY(-50%);
+    left: 25px;
+    font-size: 0.8rem;
+  }
+  
+  .input-container.focus span:before,
+  .input-container.focus span:after {
+    width: 50%;
+    opacity: 1;
+  }
+
+/* CONTACT INFO */
+
+
+
+/* Create two equal columns that floats next to each other */
+.row {
+    margin-top: 50px;
+}
+.column {
+    margin-left: 470px;
+    float: left;
+    width: 250px;
+    padding: 10px 10px 10px;
+    margin-bottom: 100px ;
+  }
+
+  .row .bxl-facebook, .row.bxl-instagram-alt {
+    position: relative;
+    color: #FF0;
+    font-size: 18px;
+    text-decoration: none;
+  } 
+
+  .column h3 a:hover {
+    color: yellow;
+    transition: 1s;
+}
+
+.column p a:hover {
+    color: yellow;
+    transition: 1s;
+}
+
+  .column h3 a  {
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: 500;
+    color: #fafafa;
+    margin-bottom: 100px;
+  } 
+
+  .column p a  {
+    line-height: 2px;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 500;
+    color: #fafafa;
+  }
+  
+  .column1 {
+    margin-left: 0;
+    float: left;
+    width: 300px;
+    padding: 10px 10px 10px;
+  }
+ 
+  .bxs-envelope1, .bxs-phone-call {
+    color: #FF0;
+    font-size: 18px;
+    text-decoration: none;
+  } 
+
+  .column1 h3 a  {
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: 500;
+    color: #fafafa;
+  } 
+  .column1 h3 a:hover {
+    color: yellow;
+    transition: 1s;
+}
+
+  .column1 p a {
+    font-size: 24px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #fafafa;
+  }
+
+  .column1 p a:hover {
+    color: yellow;
+    transition: 1s;
+}
+
+
+  .totop img {
+    position: relative;
+    margin-top: 80px;
+    width: 15px;
+    height: 65px;
+    margin-left: -330px;
+    background: none;
+    font-weight: 500;
+    margin-bottom: 50px;
+    cursor: pointer;
+ }
+
+ /* Bottom contacts */
+

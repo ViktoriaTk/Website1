@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Two-Column Table with Horizontal Line</title>
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+
+<table>
+  <tr>
+    <th><h1>LOGOTYPE</h1></th>
+    <th> - 2 proposed logo concepts<br>
+        - selection of color gamut (for screens RGB and CMYK printing)<br>
+        - edits within the brief<br>
+        - different versions of the logo (main vartion, adaptive)</th>
+  </tr>
+  <tr>
+    <td>Row 1, Cell 1</td>
+    <td>Row 1, Cell 2</td>
+  </tr>
+  <tr>
+    <td>Row 2, Cell 1</td>
+    <td>Row 2, Cell 2</td>
+  </tr>
+  <tr>
+    <td>Row 3, Cell 1</td>
+    <td>Row 3, Cell 2</td>
+  </tr>
+  <!-- Horizontal line between rows -->
+  <tr>
+    <td colspan="2"><hr></td>
+  </tr>
+  <tr>
+    <td>Row 4, Cell 1</td>
+    <td>Row 4, Cell 2</td>
+  </tr>
+</table>
+
+</body>
+</html>
